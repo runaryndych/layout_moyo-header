@@ -1,15 +1,20 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --blue-color: #00acdc;
 }
 
 body {
+  margin: 0;
   font-family: Roboto, sans-serif;
   font-weight: 500;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 header {
+  box-sizing: border-box;
   width: 100%;
   background-color: #fff;
   display: flex;
@@ -35,18 +40,18 @@ header {
   position: relative;
 }
 
-nav ul {
+.nav__list {
   list-style: none;
   display: flex;
   align-items: center;
 }
 
-nav ul li + li {
+.nav__list li + li {
   margin-left: 20px;
 }
 
 .nav-link.is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .nav-link.is-active::after {
@@ -56,10 +61,10 @@ nav ul li + li {
   left: 0;
   width: 100%;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
   border-radius: 8px;
 }
 
 .nav-link:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
